@@ -41,7 +41,7 @@ mfsu 是一种基于 webpack5 新特性 Module Federation 的打包提速方案�
 ### 开发阶段
 
 1. 初始化一个 umi 应用。
-2. 在 config.ts 中添加 `mfsu:{}`。
+2. 在 config.ts 中添加 `mfsu:{}`，开启 MFSU 后的 congfig 配置中不再需要配置 `splitChunks:{}`，否则将会报错。
 3. `umi dev` 启动项目。在构建依赖时，会出现 MFSU 的进度条，此时应用可能会被挂起或显示依赖不存在，请稍等。
 4. 多人合作时，可以配置 `mfsu.development.output` 配置预编译依赖输出目录并添加到 git 中，在其他开发者启动时，就可以免去再次编译依赖的过程。
 
